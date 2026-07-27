@@ -1,17 +1,17 @@
 from textwrap import dedent
 
 from agno.agent import Agent
-from agno.models.google import Gemini
+from agno.models.groq import Groq
 from agno.tools.youtube import YouTubeTools
 from dotenv import load_dotenv
 load_dotenv()
 
 def youtube_agent():
   return   Agent(
-    name="YouTube Agent",
-    model=Gemini(id="gemini-3.5-flash"),
-    tools=[YouTubeTools()],
-    instructions=dedent("""\
+   name="YouTube Agent",
+   model=Groq(id="llama-3.3-70b-versatile"),
+   tools=[YouTubeTools()],
+   instructions=dedent("""\
         You are an expert YouTube content analyst with a keen eye for detail! 🎓
         Follow these steps for comprehensive video analysis:
         1. Video Overview

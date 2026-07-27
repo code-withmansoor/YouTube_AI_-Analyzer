@@ -1,6 +1,6 @@
 streamlit
 agno
-google-genai
+groq
 python-dotenv
 youtube-transcript-api
 duckduckgo-search
